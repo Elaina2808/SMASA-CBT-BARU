@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CBT Matematika - SMASA KER3N</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>🧠 Tes CBT Matematika</h1>
+    <a href="index.html" class="back-link">← Kembali ke Dashboard</a>
+  </header>
+
+  <main>
+    <form id="cbtForm">
+      <div class="soal">
+        <p>1. Berapakah hasil 5 + 7?</p>
+        <label><input type="radio" name="q1" value="a" /> 12</label>
+        <label><input type="radio" name="q1" value="b" /> 10</label>
+        <label><input type="radio" name="q1" value="c" /> 13</label>
+        <label><input type="radio" name="q1" value="d" /> 11</label>
+      </div>
+
+      <div class="soal">
+        <p>2. Jika x = 3, maka nilai 2x + 4 adalah?</p>
+        <label><input type="radio" name="q2" value="a" /> 10</label>
+        <label><input type="radio" name="q2" value="b" /> 8</label>
+        <label><input type="radio" name="q2" value="c" /> 6</label>
+        <label><input type="radio" name="q2" value="d" /> 12</label>
+      </div>
+
+      <div class="soal">
+        <p>3. Mana bilangan prima berikut?</p>
+        <label><input type="radio" name="q3" value="a" /> 4</label>
+        <label><input type="radio" name="q3" value="b" /> 6</label>
+        <label><input type="radio" name="q3" value="c" /> 7</label>
+        <label><input type="radio" name="q3" value="d" /> 9</label>
+      </div>
+
+      <!-- Tambah soal sampai 25 -->
+
+      <button type="submit">Kirim Jawaban</button>
+    </form>
+
+    <div id="hasil"></div>
+  </main>
+
+  <script>
+    const jawabanBenar = {
+      q1: "a",
+      q2: "a",
+      q3: "c",
+      // Tambahkan sampai q25
+    };
+
+    document.getElementById("cbtForm").onsubmit = function (e) {
+      e.preventDefault();
+      let skor = 0;
+      for (const soal in jawabanBenar) {
+        const pilihan = document.querySelector(
+          `input[name="${soal}"]:checked`
+        );
+        if (pilihan && pilihan.value === jawabanBenar[soal]) {
+          skor++;
+        }
+      }
+      document.getElementById("hasil").textContent =
+        "Nilai Anda: " + skor + " dari 25";
+    };
+  </script>
+</body>
+</html>
+
