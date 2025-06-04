@@ -1,0 +1,62 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #e8f0fe;
+  color: #003366;
+  margin: 0;
+  padding: 0;
+}
+header {
+  background-color: #3399ff;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+.back-link {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 10px;
+}
+main {
+  max-width: 700px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+}
+.card, .soal {
+  margin-bottom: 20px;
+}
+.soal p {
+  font-weight: bold;
+}
+label {
+  display: block;
+  margin: 6px 0;
+  cursor: pointer;
+}
+button {
+  background-color: #3399ff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #267acc;
+}
+#hasil {
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #0059b3;
+}
+footer {
+  text-align: center;
+  padding: 10px;
+  color: #777;
+  margin-top: 40px;
+}
